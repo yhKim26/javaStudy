@@ -2,22 +2,24 @@
 public class javaStudy {
 
 	public static void main(String args[]) {
-		Child c = new Child();
-		c.method();
+		Animal animal = new Animal();
+		Dog dog = new Dog();
+		
+		animal.sound();
+		dog.sound();
 	}
 
 }
 
-class Parent {
-	int x = 10;
+class Animal{
+
+	void sound(){
+		System.out.println("동물이 소리를 냅니다");
+
+	}
 }
-
-class Child extends Parent {
-	int x = 20;
-
-	void method() {
-		System.out.println("x=" + x);
-		System.out.println("this.x=" + this.x);
-		System.out.println("super.x=" + super.x);
+class Dog extends Animal{
+	void sound(){
+		System.out.println("멍멍!");
 	}
 }
