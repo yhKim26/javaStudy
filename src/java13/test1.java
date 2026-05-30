@@ -1,0 +1,35 @@
+/// Vehicle 클래스 , move()메서드 작성 "이동합니다." 출력
+/// Car 클래스 Vehicle 상속, move()메서드 오버라이딩 "자동차가 도로를 달립니다." 출력
+/// Bicycle 클래스, Vehicle 상속 move()메서드 오버라이딩 "자전거가 자전거 도로를 달립니다." 출력
+/// main()메서드에서 객체를 생성하고 결과 확인
+package java13;
+
+public class test1 {
+    public static void main(String args[]){
+        Car car = new Car();
+        Bicycle bicycle = new Bicycle();
+        car.move();
+        bicycle.move();
+    }
+}
+
+class Vehicle{
+    void move(){
+        System.out.println("이동합니다.");
+    }
+}
+
+class Car extends Vehicle{
+    @Override
+    void move() {
+        super.move();
+        System.out.println("자동차가 도로를 달립니다.");
+    }
+}
+
+class Bicycle extends Vehicle{
+    @Override
+    void move(){
+        System.out.println("자전거가 자전거 도로를 달립니다.");
+    }
+}
